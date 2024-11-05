@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'erp/style.css' %}">
+</head>
+
+<body>
+ {{base| crispy}}
+    <nav id="navbar">
+        <hr>
+        <a href="{% url 'login' %}">Login Page</a> &nbsp;
+        <a href="{% url 'reg' %}">Registration Page</a> &nbsp;
+        <hr>
+    </nav>
+    {% load static %}
+    <img src="{% static 'erp/images/ak.jpeg' %}" alt="My Static Image" style="width: 90%; height: auto;"/>
+
+    <footer>
+        <hr>
+        <p>&copy; 2024 klu. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@klu.com">info@klu.com</a></p>
+    </footer>
+</body>
+
+</html>
